@@ -1,0 +1,36 @@
+
+<h1>Currency Exchange</h1>
+
+<div class="d-inline-block">Amount:</div>
+
+<div class="d-inline-block">
+  <input type="text" class="form-control" aria-label="Amount entry" id="AmountInput" aria-describedby="basic-addon1">
+</div>
+
+<div class="d-inline-block">From:</div>
+
+<div class="d-inline-block" ngbDropdown #myDrop1="ngbDropdown">
+  <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual1" ngbDropdownAnchor (focus)="myDrop1.open()">{{currencyFrom}}</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual1">
+    <div *ngFor="let symbol of symbols">
+      <button ngbDropdownItem (click)="onClickCurrencyFromSelection(symbol)">{{symbol}}</button>
+    </div>
+  </div>
+</div>
+
+<div class="d-inline-block">To:</div>
+
+<div class="d-inline-block" ngbDropdown #myDrop2="ngbDropdown">
+  <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual2" ngbDropdownAnchor (focus)="myDrop2.open()">{{currencyTo}}</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual2">
+    <div *ngFor="let symbol of symbols">
+      <button ngbDropdownItem (click)="onClickCurrencyToSelection(symbol)">{{symbol}}</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <button type="button" class="btn btn-primary" (click)="onClickConvertCurrency()">Convert</button>
+</div>
+
+<h5>{{currencyOutput}}</h5>

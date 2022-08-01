@@ -1,0 +1,1 @@
+docker run -it --rm --name currencyexchangebackendapp --network=currency-network -e DATABASE_NAME=currency_exchange_innodox -e DATABASE_USERNAME=currency_exchange_innodox_user -e DATABASE_PASSWORD=currency_exchange_innodox_pass -e DATABASE_URL=jdbc:postgresql://currency-db:5432/currency_exchange_innodox -p 8080:8080 currencyexchangebackendapp
