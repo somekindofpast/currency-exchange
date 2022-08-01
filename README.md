@@ -10,7 +10,7 @@ The rates can be edited in the data.sql file.
 
 The frontend, backend and database server run independent of each other.
 
-- create a database manually or run currency-db, to start the PostgreSQL database from Docker container.
+- create a database manually or run currency-db, to start the PostgreSQL database from Docker container. (download postgres:14.3-alpine image from docker hub beforehand)
 - start the backend api from a development environment or by running docker_build and currency-api_run, to build and run
 the backend from Docker container.
 - start the frontend from a development environment with Angular CLI, after installing the necessary packages for Angular.
